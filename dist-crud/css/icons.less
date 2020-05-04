@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Material-Design-Icons";
+    src: url("Material-Design-Icons.eot");
+    src: url("/Material-Design-Icons.eot?#iefix") format("embedded-opentype"),
+    url("Material-Design-Icons.woff") format("woff"),
+    url("Material-Design-Icons.ttf") format("truetype");
+  //   url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/64/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@icons:{
+    font-family: "Material-Design-Icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 30px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50%;
+}
+@icon-add:{
+    @icons();
+    &:before{
+        content: "\e6fb";
+    }
+}
+@icon-edit:{
+    @icons();
+    &:before{
+        content: "\e796";
+    }
+}
+@icon-remove:{
+    @icons();
+    &:before{
+        content: "\e620";
+    }
+}
+@icon-context-vertical:{
+    @icons();
+    &:before{
+        content: "\e8a3";
+    }
+}

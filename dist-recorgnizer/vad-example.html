@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>VAD Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<script type="text/javascript" src="./vad.js"></script>
+<script type="text/javascript">
+  // Create AudioContext
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  var audioContext = new AudioContext();
+
+  // Define function called by getUserMedia 
+  function startUserMedia(stream) {
+    // Create MediaStreamAudioSourceNode
+    var source = audioContext.createMediaStreamSource(stream);
+
+    // Setup options
+    var options = {
+     source: source,
+     voice_stop: function(e) {console.log('voice_stop', e);}, 
+     voice_start: function(e) {console.log('voice_start', e);}
+    }; 
+    
+    // Create VAD
+    var vad = new VAD(options);
+  }
+
+  // Ask for audio device
+  navigator.getUserMedia = navigator.getUserMedia || 
+                           navigator.mozGetUserMedia || 
+                           navigator.webkitGetUserMedia;
+  navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+    console.log("No live audio input in this browser: " + e);
+  });
+</script>
+</body>
+</html>

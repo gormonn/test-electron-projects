@@ -1,0 +1,35 @@
+{
+  "name": "electron-crud",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "electron .",
+    "less-watch": "less-watch-compiler dist/css dist/css style.less",
+    "less": "lessc dist/css/style.less dist/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dmitri-chernuho-neuro-city@bitbucket.org/dmitri-chernuho-neuro-city/electron-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/dmitri-chernuho-neuro-city/electron-crud#readme",
+  "devDependencies": {
+    "electron": "^8.2.0",
+    "electron-reload": "^1.5.0",
+    "request": "^2.88.2"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "3.6.0",
+    "@tensorflow-models/posenet": "^2.2.1",
+    "electron-hot-reload": "^0.1.4",
+    "electron-log": "^4.1.1",
+    "google-auth-library": "^6.0.0",
+    "grpc": "^1.24.2",
+    "inline-worker": "^1.1.0",
+    "nodejs-speech-kiosk-usercase": "^0.0.901",
+    "rebuild": "^0.1.2"
+  }
+}

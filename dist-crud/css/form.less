@@ -1,0 +1,17 @@
+.form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: center;
+
+    &__text-input{
+        // margin: 40px 25px;
+        width: 200px;
+        .fx-input();
+    }
+    &__submit-button{
+        .button();
+        @icon-add();
+    }
+}

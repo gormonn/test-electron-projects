@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TODOList</title>
+    <link href="css/style.css?3"  rel="stylesheet" type="text/css" >
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__row">
+        <span class="header__row-title">To Do List</span>
+      </div>
+    </header>
+    <main>
+      <form class="form" id="action-add">
+        <input class="form__text-input" required id="name" type="text" placeholder="Название тудухи">
+        <button class="button form__submit-button" type="submit"></button>
+      </form>
+      <div id="todolist"></div>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
